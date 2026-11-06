@@ -1,0 +1,37 @@
+name: 字典問題與建議
+description: 錯字、字義、注音或功能問題；請由家長或老師填寫。
+title: "[回饋] "
+body:
+  - type: markdown
+    attributes:
+      value: 請勿提供學生姓名、學校、電話或含個資的作業照片。回饋可能公開。
+  - type: dropdown
+    id: category
+    attributes:
+      label: 問題類型
+      options: [錯字／字義／注音, 功能缺失, 功能失效, 新增／刪減／優化建議]
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 問題描述與重現步驟
+      description: 若為字詞問題，請附字詞、讀音、問題所在辭典或 AI 例句。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 預期結果／建議修正
+  - type: textarea
+    id: version
+    attributes:
+      label: App、系統及字典版本
+      description: 字典版本可在「資料來源與說明」查看。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 提交前確認
+      options:
+        - label: 我是家長／老師，已移除個人資料，了解回饋可能公開。
+          required: true
